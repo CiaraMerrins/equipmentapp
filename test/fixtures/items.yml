@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  poster: MyString
+  description: MyString
+  equipmenttype_id: 1
+  manufacturer: MyString
+
+two:
+  poster: MyString
+  description: MyString
+  equipmenttype_id: 1
+  manufacturer: MyString

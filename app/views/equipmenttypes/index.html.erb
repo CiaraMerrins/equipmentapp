@@ -1,0 +1,23 @@
+<h1>Listing equipmenttypes</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @equipmenttypes.each do |equipmenttype| %>
+  <tr>
+    <td><%= equipmenttype.name %></td>
+    <td><%= link_to 'Show', equipmenttype %></td>
+    <td><%= link_to 'Edit', edit_equipmenttype_path(equipmenttype) %></td>
+    <td><%= link_to 'Destroy', equipmenttype, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Equipmenttype', new_equipmenttype_path %>
