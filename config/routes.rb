@@ -1,5 +1,8 @@
 Equipmentapp::Application.routes.draw do
-  resources :posts
+  get "shop/index"
+
+
+  #resources :posts
 
   get "sessions/new"
 
@@ -24,9 +27,11 @@ Equipmentapp::Application.routes.draw do
   resources :items do
 	resources :posts
 end
+
   
   match '/signin', :to => 'sessions#new'
   match 'signout', :to => 'sessions#destroy'
+  match '/search', :to => 'items#search'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

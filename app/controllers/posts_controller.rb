@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-
+	before_filter :authorise
 def create
      @item = Item.find params[:item_id]
      @post = @item.posts.create params[:post]

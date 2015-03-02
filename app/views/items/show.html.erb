@@ -1,10 +1,14 @@
 <p id="notice"><%= notice %></p>
+<div align="middle">
 
 <p>
-  <b>Poster:</b>
-  <%= @item.poster %>
+  <b>Name:</b>
+  <%= @item.equipname %>
 </p>
-
+<p>
+  <b>Image</b>
+  
+</p>
 <p>
   <%= image_tag(@item.poster, :size => "150x100") %>
 </p>
@@ -24,7 +28,10 @@
   <%= @item.manufacturer %>
 </p>
 
-<h2>Please review your equipment type: </h2>
+<b><%= link_to 'BUY NOW' %></b>
+</div>
+
+<h2>Please review your chosen product: </h2>
 	<%= form_for([@item, Post.new]) do |f| %>
 		<%= f.text_area :content, :rows => 3 %>
 			<div class="actions">
@@ -35,7 +42,7 @@
 	<% if @item.posts.empty? %>
     <h3>You are the first  to comment </h3>
 <% else %>
- <h2>What others felt about this:</h2>
+ <h2>Product Reviews:</h2>
   <% @item.posts.reverse.each do |post| %>
 	<p><%= post.content %>
          Posted <%= time_ago_in_words(post.created_at) %> ago by
@@ -45,5 +52,10 @@
 
 
 
+ |
+ <% if !signed_in? %>
 <%= link_to 'Edit', edit_item_path(@item) %> |
+
+<% else %>
 <%= link_to 'Back', items_path %>
+<% end %>

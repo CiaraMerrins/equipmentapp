@@ -1,6 +1,5 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  
   def authorise 
 	unless signed_in?
 		store_location

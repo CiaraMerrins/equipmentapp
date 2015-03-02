@@ -7,38 +7,54 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+<ul>	
 <div id="banner">
-<%= image_tag("gaa1.jpg", :size => "1300x250", ) %>
-    GAA
+<%= image_tag("gaa1.jpg", :size => "1300x100", ) %>
+    Welcome to your gaa merchandise store!
 </div>
 
-<div id="nav">
+</ul>
+
+
+<div id="nav", align="middle">
     <ul>
-		
+		<li><%= link_to "Sign up", 'http://localhost:3000/users/new' %></li>
 		<% if !signed_in? %>
 			<li><%= link_to "Sign in", signin_path %></li>
 		<% else %>
 			<li>Signed in as <%= @current_user.name %></li>
 			<li><%= link_to "Sign out", signout_path %></li>
+			
+		<li><%= link_to "Home page", 'http://localhost:3000/' %></li>
+		<li><%= link_to "Shop", items_path %></li>
+		<li><%= link_to "View Your Basket" %></li>
+		<li><%= link_to "Equipment types", equipmenttypes_path %></li>
 		<% end %>
-
-	  <li><%= link_to "Home page", 'http://localhost:3000/' %></li>
-      <li><%= link_to "Shop", items_path %></li>
-      <li><%= link_to "View Your Basket" %></li>
-	  <li><%= link_to "Create User", new_user_path %></li>
-	  <li><%= link_to "Equipment types", equipmenttypes_path %></li>
+	
 	  
     </ul>
+	
+	
 </div>
+
+<ul>
+<div id="search">
+<%= render :partial => 'items/search' %>
+	</div>
+	</ul>
+
 <body>
 
 <div align = "middle">
 
-<h1>Welcome to your gaa merchandise store!</h1>
+<%= image_tag("gaa.jpg", :size => "50x50") %>
 <li><%= link_to "My Git Account", 'https://github.com/CiaraMerrins/equipmentapp' %></li>
 <p><b>Name: </b>Ciara Merrins(C12349341)</p>
 <p><b>Application Name: </b>equipmentapp</p>
-<%= image_tag("gaa.jpg", :size => "100*50") %>
+
+
+
 </div>
 
 
@@ -48,6 +64,9 @@
 
 
 <%= yield %>
+
+
+
 
 </body>
 </html>

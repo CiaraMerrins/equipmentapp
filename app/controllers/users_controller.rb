@@ -30,6 +30,9 @@ class UsersController < ApplicationController
       format.html # new.html.erb
       format.json { render json: @user }
     end
+	
+	
+  
   end
 
   # GET /users/1/edit
@@ -69,6 +72,7 @@ class UsersController < ApplicationController
       end
     end
   end
+#@nearbys = user.near(@customer.address, 10, :order => :distance, :units => :km)
 
   # DELETE /users/1
   # DELETE /users/1.json

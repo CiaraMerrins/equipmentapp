@@ -1,6 +1,15 @@
 class ItemsController < ApplicationController
   # GET /items
   # GET /items.json
+  def search
+	@items = Item.search params[:q]
+	unless @items.empty?
+		render 'index'
+	else
+		flash[:notice] = 'No item matches your search, Sorry!'
+		render 'index'
+	end
+end
   def index
     @items = Item.all
 

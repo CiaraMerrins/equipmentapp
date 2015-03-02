@@ -1,5 +1,6 @@
 module ApplicationHelper
 
+
 def signed_in?
 	if session[:user_id].nil?
 		return

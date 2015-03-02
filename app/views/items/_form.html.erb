@@ -11,16 +11,21 @@
     </div>
   <% end %>
 
-  
-  
   <div class="field">
-    <%= f.label :poster %><br />
-    <%= f.text_field :poster %>
+    <%= f.label :equipname %><br />
+    <%= f.text_field :equipname %>
   </div>
+  
+
   <div class="field">
     <%= f.label :description %><br />
     <%= f.text_field :description %>
   </div>
+  <div class="field">
+    <%= f.label :price %><br />
+    <%= f.text_field :price %>
+  </div>
+  
   <div class="field">
     <%= f.label :equipmenttype_id %><br />
     
@@ -30,6 +35,13 @@
     <%= f.label :manufacturer %><br />
     <%= f.text_field :manufacturer %>
 	
+	<div class="field">
+       <%= f.label :poster if @item.poster? %><br />
+       <%= f.file_field :poster %>
+  </div>
+
+
+  
   </div>
   <div class="actions">
     <%= f.submit %>

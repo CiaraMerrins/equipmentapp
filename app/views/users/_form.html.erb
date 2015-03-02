@@ -10,7 +10,7 @@
       </ul>
     </div>
   <% end %>
-
+<div align="middle">
   <div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name %>
@@ -21,10 +21,14 @@
     <%= f.text_field :email %>
   </div>
   
+  <div class="field">
+    <%= f.label :address %><br />
+    <%= f.text_field :address %>
+  </div>
   
   <div class="field">
     <%= f.label :gender %><br />
-    <%= f.text_field :gender %>
+    <%= f.select :gender, ["", "Male", "Female"] %>
   </div>
   
   
@@ -47,4 +51,5 @@
   <div class="actions">
     <%= f.submit %>
   </div>
+  
 <% end %>

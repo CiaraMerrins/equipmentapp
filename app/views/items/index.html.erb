@@ -1,10 +1,12 @@
-<h1>Listing items</h1>
-
-<table>
+<div align="middle">
+<h1><b><u><i>Equipment availabale</h1></b></u></i>
+</div>
+<table border="1" style="width:100%">
   <tr>
-    <th>Poster</th>
+  <th>Name</th>
+	
     <th>Description</th>
-    <th>Equipmenttype</th>
+    <th>Price</th>
     <th>Manufacturer</th>
     <th></th>
     <th></th>
@@ -13,17 +15,25 @@
 
 <% @items.each do |item| %>
   <tr>
-    <td><%= item.poster %></td>
+  <td><%= item.equipname %></td>
+	
     <td><%= item.description %></td>
-    <td><%= item.equipmenttype_id %></td>
+    <td><%= item.price %></td>
     <td><%= item.manufacturer %></td>
-    <td><%= link_to 'Show', item %></td>
-    <td><%= link_to 'Edit', edit_item_path(item) %></td>
+    
+	
+	<% if !signed_in? %>
+	<td><%= link_to 'Edit', edit_item_path(item) %></td>
     <td><%= link_to 'Destroy', item, confirm: 'Are you sure?', method: :delete %></td>
+	<%= link_to 'New Item', new_item_path %>
+	<% else %>
+	<td><%= link_to 'Show', item %></td>
+	<% end %>
+	
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Item', new_item_path %>
+

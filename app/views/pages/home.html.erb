@@ -1,7 +1,42 @@
-<h1>Sign in OR Sign up below </h1>
-<br><br><br><br>
-<h2>New User?<%= link_to "Sign up Now!", users_path %></h2>
+<!DOCTYPE html>
+<html>
+<body>
+<div align="middle">
+<p><b><u><i>General Info about the GAA</p></b></u></i>
+<p>The Gaelic Athletic Association / Cumann Lúthchleas Gael is a 32 county sporting and cultural organisation that has a presence on all five continents..</p>
 
+<button onclick="myFunction()">More Information</button>
 
-<br><br><br><br>
-<h2>Existing user <%= link_to "Sign in here", signin_path %></h2>
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+    document.getElementById("demo").innerHTML = "The GAA is a volunteer led, community based organisation that promotes Gaelic games such as Hurling, Football, Handball and Rounders and works with sister organisations to promote Ladies Football and Camogie. It is part of the Irish consciousness and plays an influential role in Irish society that extends far beyond the basic aim of promoting Gaelic games. The Association has its headquarters at Croke Park in Dublin where it has been based on a full time basis since 1908. The stadium, which was redeveloped between 1993 and 2003, has a capacity of 82,300 and hosts some of the highest profile events in the Irish sporting calendar. The GAA is underpinned by a democratic elective structure that sees members at various different levels elect officers to serving positions on a variety of tiers up to and including the position of Uachtarán (President). The GAA’s internal management structure is multi-layered with the vast majority of all serving officers beginning their administrative involvement at club level. All administrators, regardless of rank or their level of involvement, are members of one of the Association’s 2,300 plus clubs.";
+}
+</script>
+</div>
+</body>
+
+<div id="banner">
+<%= image_tag("gaa1.jpg", :size => "130x80", ) %>
+<%= image_tag("boot.jpg", :size => "110x60", ) %>
+<%= image_tag("hurl.jpg", :size => "110x80", ) %>
+<%= image_tag("gaa.jpg", :size => "130x60", ) %>
+<%= image_tag("gaa4.jpg", :size => "150x80", ) %>
+<%= image_tag("gloves.jpg", :size => "110x60", ) %>
+<%= image_tag("gaa6.jpg", :size => "130x80", ) %>
+<%= image_tag("helmet.jpg", :size => "110x60", ) %>
+<%= image_tag("gaa3.jpg", :size => "130x80", ) %>
+<%= image_tag("gaa2.jpg", :size => "160x60", ) %>
+<%= image_tag("gaa7.jpg", :size => "110x80", ) %>
+
+</div>
+<br>
+<br>
+<br>
+<br>
+  <p>--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+  <p>Posted by: Ciara Merrins</p>
+  <p>Contact information:ciaramerrins@gmail.com</p>
+  <p>--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</p>
+</html>

@@ -1,29 +1,45 @@
 <p id="notice"><%= notice %></p>
-
+<table border="1" style="width:100%">
+<tr>
+<td>
 <p>
   <b>Name:</b>
   <%= @user.name %>
+</p></td>
+<td>
+<p>
+	<b>Address: </b>
+	<%= @user.address %>
 </p>
-
+</td>
+<td>
 <p>
   <b>Email:</b>
   <%= @user.email %>
 </p>
-
+</td>
+<td>
 <p>
   <b>Gender:</b>
   <%= @user.gender %>
 </p>
-
+</td>
+<td>
 <p>
   <b>Regular:</b>
   <%= @user.regular %>
 </p>
+</td>
+</table>
+<div align="Middle">
+<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{53.3608}%2C#{6.2513}" %>
+</div>
 
-<p>
-  <b>Password digest:</b>
-  <%= @user.password_digest %>
-</p>
+
+
+
+
+
 
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
